@@ -3,20 +3,23 @@
 #include <stdio.h>
 #include <math.h>
 
-float mc_pi(int n){
-    int circle = 0;
-    int square = 0;
-    float x, y;
-for(int i=1; i<=n; i++){
-    x= frandom();
-    y= frandom();
-    if (((xx)+ (yy))<=1){circle++;}
-    else {square++;}
-} square = square + circle;
- float pi = 4*circle/square;
-return pi;
-}
+float mc_pi(int num)
+{
+    int i,p=0;
+  float d,x,y,pi;
+   for(i=1;i<=num;i++)
+    {
+    x=((frandom()*2)-1);
+    y=((frandom()*2)-1);
+    d=sqrt(x*x+y*y);
 
+     if(d<1)
+       {
+        p=p+1 ;
+       }
+    }
+   return (pi=4*((float)p/(float)num));
+}
 
 float frandom() {
   long int q = random();
