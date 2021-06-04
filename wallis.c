@@ -12,7 +12,7 @@ float wallis_pi(int num)
     a=4*n*n;
     p=p*(a/(a-1));
   }
-  return (pi=p*2.0);
+  return(pi=p*2.0);
 
 }
 
